@@ -25,7 +25,7 @@
 <body id="index" class="home">
 {% include 'github.html' %}
         <header id="banner" class="body">
-                <h1><a href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+                <h1>{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</h1>
                 <nav><ul>
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
@@ -46,6 +46,7 @@
         {% endblock %}
 
         <aside id="sidebar">
+        {% if DISPLAY_CATEGORIES %}
                 <div class="widget">
                         <h2>Categories</h2>
                         <ul>
@@ -54,9 +55,9 @@
                         {% endfor %}
                         </ul>
                 </div>
+        {% endif %}
         {% if LINKS %}
                 <div class="widget blogroll">
-                        <h2>Blogroll</h2>
                         <ul>
                         {% for name, link in LINKS %}
                             <li><a href="{{ link }}">{{ name }}</a></li>
