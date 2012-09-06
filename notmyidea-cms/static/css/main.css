@@ -155,15 +155,14 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	#banner h1 {
         font-size: 3.571em; 
         line-height: 0;
-	    margin: 0 auto 0 auto;
+		display: block;
+		font-weight: bold;
+		margin: 0.2em auto 0.7em auto;
+		text-decoration: none;
+		width: 427px;
     }
 	#banner h1 a:link, #banner h1 a:visited {
 		color: #000305;
-		display: block;
-		font-weight: bold;
-		margin: 0 auto .6em auto;
-		text-decoration: none;
-		width: 427px;
 	}
 	#banner h1 a:hover, #banner h1 a:active {
 		background: none;
