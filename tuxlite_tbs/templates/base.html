@@ -5,6 +5,7 @@
     <title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="">
     <meta name="author" content="{{ AUTHOR }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -67,11 +68,11 @@
                 Site
                 </li>
             
-                <li><a href="{{ SITEURL }}/archives.html">Archives</a>
+                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a>
                 <li><a href="{{ SITEURL }}/tags.html">Tags</a>
-                <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">Atom feed</a></li>
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" rel="alternate">Atom feed</a></li>
                 {% if FEED_RSS %}
-                <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
                 {% endif %}
             </ul>
             </div>
